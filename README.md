@@ -90,13 +90,19 @@ TensorBoard → **http://localhost:6006**
 
 ---
 
-## Manual Setup (no Docker)
+## Manual Setup — Docker (recommended for others)
+docker-compose up
 
-> ⚠️ Requires Python 3.8 exactly. Use pyenv or conda to manage this.
+## Setup — Local venv (faster iteration)
+python -m venv venv
+venv\Scripts\activate        # Windows
+pip install -r requirements-dev.txt
+
+> ⚠️ Requires Python 3.7 exactly. Use pyenv or conda to manage this.
 
 ```bash
 # Create environment
-conda create -n thesis python=3.8 -y
+conda create -n thesis python=3.7 -y
 conda activate thesis
 
 # Install dependencies
