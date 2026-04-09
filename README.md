@@ -1,6 +1,8 @@
 # S.P.A.C.E - Smart Parking Application for Circulation Efficiency with TF OD API
 > Parking lot occupancy detection (PKLot + custom dataset) using the TensorFlow Object Detection API.
-
+<p align="center">
+  <img src="assests/parkingreadme.png" alt="Smart parking application illustration" width="900">
+</p>
 ---
 
 ## Table of Contents
