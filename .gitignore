@@ -1,97 +1,11 @@
-# ─────────────────────────────────────────────────────────────────────────────
-# .gitignore — Thesis Object Detection Project
-# ─────────────────────────────────────────────────────────────────────────────
-
-# ── Datasets (large files — store externally or use DVC) ─────────────────────
-datasets/*/raw/
-datasets/*/tfrecords/
-*.tfrecord
-*.record
-
-# Keep folder structure with placeholder files
-!datasets/**/.gitkeep
-
-# ── Model weights & checkpoints (large binary files) ─────────────────────────
-models/*/saved_model/
-models/*/checkpoint/
-models/*/onnx/
-models/*/tflite/
-*.ckpt
-*.ckpt.*
-*.index
-*.data-*
-*.pb
-!models/**/.gitkeep
-
-# ── Training artifacts ────────────────────────────────────────────────────────
-**/train/
-**/eval/
-events.out.tfevents.*
-pipeline.config.bak
-
-# ── Python ────────────────────────────────────────────────────────────────────
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-*.egg
-*.egg-info/
-dist/
-build/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.whl
-.installed.cfg
-MANIFEST
-.env
-.venv
-env/
 venv/
-ENV/
-pip-log.txt
-pip-delete-this-directory.txt
-
-# ── Jupyter ───────────────────────────────────────────────────────────────────
-.ipynb_checkpoints/
-*/.ipynb_checkpoints/*
-# Uncomment below to strip notebook outputs before committing (cleaner diffs):
-# *.ipynb  # use nbstripout instead: pip install nbstripout && nbstripout --install
-
-# ── Docker ────────────────────────────────────────────────────────────────────
-.docker/
-
-# ── OS ────────────────────────────────────────────────────────────────────────
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
-
-# ── IDE ───────────────────────────────────────────────────────────────────────
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# ── Kaggle credentials ────────────────────────────────────────────────────────
-kaggle.json
-.kaggle/
-
-# ── Misc ──────────────────────────────────────────────────────────────────────
-*.log
-*.tmp
-*.bak
-results/visualizations/*.png
-results/visualizations/*.jpg
-!results/visualizations/.gitkeep
+.venv/
+datasets/
+*.record
+*.tfrecord
+*.pb
+*.pbtxt
+*.ckpt
+*.index
+*.data-00000-of-00001
+results/
