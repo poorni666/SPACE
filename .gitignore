@@ -1,31 +1,37 @@
+# Virtual environments
 venv/
 .venv/
-datasets/
+
+# Datasets (too large for Git)
+datasets/**
+!datasets/README.md
+!datasets/pklot/.gitkeep
+!datasets/custom/.gitkeep
+
+# TFRecord / raw data files
 *.record
 *.tfrecord
+
+# Model weights and large exports
+models/checkpoints/**
+models/exported/**
+!models/checkpoints/.gitkeep
+!models/exported/.gitkeep
+
+# TFLite — small enough to keep
+!models/tflite/*.tflite
+!models/tflite/.gitkeep
+
+# Protobuf / checkpoint files
 *.pb
 *.pbtxt
 *.ckpt
+*.ckpt.*
 *.index
 *.data-00000-of-00001
-results/
-
-# Datasets (too large for Git)
-datasets/pklot/*
-datasets/custom/*
-!datasets/pklot/.gitkeep
-!datasets/custom/.gitkeep
-!datasets/README.md
-
-# Large model outputs
-results/*/exported_model/
-results/*/checkpoint/
-*.ckpt
-*.ckpt.*
-*.pb
 *.saved_model
 
-# Keep small meaningful outputs
-!results/*/metrics.json
-!results/*/tflite/*.tflite
+# Results — only keep metrics
+results/**
 !results/README.md
+!results/metrics_*.json
